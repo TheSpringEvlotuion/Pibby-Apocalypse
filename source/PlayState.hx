@@ -728,6 +728,7 @@ class PlayState extends MusicBeatState
 			noHeroIntro.frames = Paths.getSparrowAtlas('noherocutscenefirst', 'shared');
 			noHeroIntro.animation.addByPrefix('finnJumpscareMomento', 'play', 24, true);
 			noHeroIntro.scale.set(2.0, 2.0);
+			noHeroIntro.updateHitbox();
 			noHeroIntro.cameras = [camOther];
 		}
 
