@@ -727,6 +727,7 @@ class PlayState extends MusicBeatState
 			noHeroIntro = new FlxSprite(-200, -400);
 			noHeroIntro.frames = Paths.getSparrowAtlas('noherocutscenefirst', 'shared');
 			noHeroIntro.animation.addByPrefix('finnJumpscareMomento', 'play', 24, true);
+			noHeroIntro.scale.set(2.0, 2.0);
 			noHeroIntro.cameras = [camOther];
 		}
 
@@ -856,6 +857,8 @@ class PlayState extends MusicBeatState
             finnT.animation.addByPrefix('cutscene', 'FINN-CUTSCENE', 24, false);
             finnT.alpha = 0.0001;
             finnT.scrollFactor.set();
+            finnT.scale.set(2.0, 2.0);
+            finnT.updateHitbox();
             add(finnT);
         }
 
